@@ -3,15 +3,6 @@ The hit game wordle is fun. I've been thinking about an algorithm to look at way
 
 The game consists of a list of words, any of which could be the starting point, and any of which could be the ending point. Multiple pathways connect through the middle because of the potential for a number of words to satisfy the conditions imposed by the response to any given guess. 
 
-i
-
-
-ed
-
-
-
-
- WHY DO PEOPLE LIKE WORDLE IT ISN'T THAT GOOD TBH -SPENCER MARSHALL
 Right now, I'm trying to implement a function that returns
 1. The position of letters that are in the right place
 2. The position of letters that are in the target word, but in the wrong place
@@ -26,7 +17,7 @@ There is more discussion about elimination potential below, but for now, my hypo
 
 ## Questions: 
 If it is true that dividing the search space in half is the best approach (I don't know that it is, nor do I have a strong sense for how to prove it), these are some questions I would be interested in asking: 
-1.
+1. What is the average solution speed choosing a word that splits the domain? 
 2. How does that speed compare to the size of the target list? (constrain the size of the list, compare)
 3. What happens when we expand the potential guess pool outside the target list? (i.e., use the 13k permitted words; seems like this might invalidate the approach altogether, which presupposes an abiility to enumerate the target space.)
 4. Does it matter which word you choose first? (It is likely that a number of words split the domain equally... if we do a montecarlo test on all of them, what does it turn up?)
@@ -40,4 +31,6 @@ For the moment, it appears that the wordlist is being used without any randomiza
 That's not a particularly noble approach, but it seems like you could get perfect scores.
 
 ### Update:
-Sometime in May 2023 the NYT started to scramble the word order.
+
+Sometime in May they started to scramble the word order...
+
